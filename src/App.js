@@ -25,8 +25,8 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login setUser={setUser}/>} />
             <Route path="/register" element={<Register setUser={setUser} />} />
-            {/* <Route path="/doctormanagement" element={<DocElement user={user}><DoctorManagement /></DocElement>} />
-            <Route path="/patientappointments" element={<PatElement user={user}><PatientAppointments /></PatElement>} /> */}
+            <Route path="/doctormanagement" element={<DocElement user={user}><DoctorManagement /></DocElement>} />
+            <Route path="/patientappointments" element={<PatElement user={user}><PatientAppointments /></PatElement>} />
             <Route path="/patientappointments" element={<PatientAppointments />} />
             <Route path="/doctormanagement" element={<DoctorManagement />} />
             <Route path="/homepage" element={<Homepage />} />
@@ -43,20 +43,28 @@ function App() {
   );
 }
 
-// function PatElement({ children, user }) {
-//   if (user && user.type === 'patient') {
-//     return <>{children}</>;
-//   } else {
-//     return <div>Access Denied: You are not a Patient</div>;
-//   }
-// }
+function PatElement({ children, user }) {
+  if (user && user.type === 'patient') {
+    return <>{children}</>;
+  } else {
+    return (
+      <div className="deniedMessageContainer"> {/* Container div */}
+        <div className="deniedMessage">Access Denied: You are not a Patient</div>
+      </div>
+    );
+  }
+}
 
-// function DocElement({ children, user }) {
-//   if (user && user.type === 'doctor') {
-//     return <>{children}</>;
-//   } else {
-//     return <div>Access Denied: You are not a Doctor</div>;
-//   }
-// }
+function DocElement({ children, user }) {
+  if (user && user.type === 'doctor') {
+    return <>{children}</>;
+  } else {
+    return (
+      <div className="deniedMessageContainer"> {/* Container div */}
+        <div className="deniedMessage">Access Denied: You are not a Doctor</div>
+      </div>
+    );
+  }
+}
 
 export default App;
