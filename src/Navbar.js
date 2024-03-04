@@ -26,7 +26,13 @@ const Navbar = () => {
           <Link to="/doctormanagement">Doctor Management</Link>
         </li>
         <li className="navbar-item">
-          <Link to="/homepage">Hospital Management</Link>
+          <Link to="/homepage">E_Commerce</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/homepage">Our Campign</Link>
+        </li>
+        <li className="navbar-item">
+          <Link to="/homepage">HealthConnect</Link> {/*This is the CRM*/}
         </li>
         <li className="navbar-item">
           <Link to="/about">About Us</Link>
