@@ -1,32 +1,28 @@
 /* Navbar.css */
 /* Navbar.css */
+/* Navbar.css */
 .navbar {
-  background-color: #DCFFFB;
-  padding: 25px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  height: 35px; /* Set a fixed height for your navbar */
-  
-  position: fixed; /* This will make the navbar fixed */
-  top: 0; /* This will position the navbar at the top */
-  left: 0; /* Aligns navbar to the left edge */
-  right: 0; /* Ensures navbar extends to the right edge */
-  z-index: 1000; /* Ensures navbar stays on top of other elements */
+  background-color: #DCFFFB;
+  padding: 10px 0px;
+  height: 50px; /* Add padding to the navbar */
 }
 
 
 .navbar-logo {
   padding-left: 50px;
   display: flex;
+  
   align-items: center; /* Centers the logo vertically */
-  height: 100%; /* Use the full height of the navbar */
+  height: 50%; /* Use the full height of the navbar */
 }
 
 .navbar-logo img {
-  max-height: 240px; /* Logo's max height is limited by the navbar's height */
-  width: auto; /* Auto width to maintain aspect ratio */
+  max-height: 200px; /* Adjust the logo's max height to match the navbar's height */
+  width: auto;
+  padding-bottom: -500px; /* Auto width to maintain aspect ratio */
 }
 
 .navbar-list {
@@ -37,7 +33,10 @@
 }
 
 /* ...rest of your styles... */
-
+.navbar-text{
+  font-style: bold;
+  font-weight: 400 !important;
+}
 
 .navbar-item {
   margin: 0 10px; /* Add some space between the navbar items */
@@ -70,4 +69,59 @@
   background-color: transparent;
   text-decoration: none !important;
 }
+.dropdown {
+  float: left;
 
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 19px;
+  border: none;
+  outline: none;
+  
+  color: #000038;
+  padding: 10px 20px;
+  overflow:hidden;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+ 
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

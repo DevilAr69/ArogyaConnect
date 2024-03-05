@@ -14,7 +14,7 @@ h2{
   font-size: 20px ;
 }
 
-
+/* Homepage.css */
 .App {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #C8ECF2;
@@ -23,7 +23,9 @@ h2{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin-top: -50px; /* Adjust this value as needed */
 }
+
 
 .App-header {
   background: #c8ecf2;

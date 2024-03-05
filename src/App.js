@@ -9,6 +9,10 @@ import Navbar from './Navbar.js';
 import Homepage from './Homepage.js';
 import About from './About.js';
 import { StatusProvider } from './StatusContext';
+import Profile from './Profile.js';
+import CRM from './CRM.js';
+import QRCode from 'react-qr-code';
+import QRCodePage from './QR.js';
 
 function App() {
   const [user, setUser] = useState({ isAuthenticated: false, type: null });
@@ -31,6 +35,10 @@ function App() {
             <Route path="/doctormanagement" element={<DoctorManagement />} />
             <Route path="/homepage" element={<Homepage />} />
             <Route path="/about" element={<About />} />
+            <Route path='/profile' element={<Profile/>}/>
+            <Route path='/crm' element={<CRM/>}/>
+            <Route path='/qr' element={<QRCodePage/>}/>
+
             {user.isAuthenticated ? (
                 <Route path="/*" element={<Navigate to={user.type === 'doctor' ? "/doctormanagement" : "/patientappointments"} />} />
               ) : (
